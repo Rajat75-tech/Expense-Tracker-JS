@@ -10,24 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const storedUser = JSON.parse(localStorage.getItem("user"));
 
         if (!storedUser || storedUser.email !== loginEmail || storedUser.password !== loginPassword) {
-            swal({
-                title: "Error!",
-                text: "Invalid email or password!",
-                icon: "error",
-            });
+            alert("Invalid email or password!");
             return;
         }
 
+        // Store logged-in user info
         localStorage.setItem("loggedInUser", storedUser.username);
 
-        swal({
-            title: "Success!",
-            text: "Login successful! Redirecting to home page...",
-            icon: "success",
-            timer: 2000,
-            buttons: false,
-        }).then(() => {
-            window.location.href = "./Main/main.html";
-        });
+        alert("Login successful! Redirecting to home page...");
+        window.location.href = "../Main/main.html"; // Redirect to main page
     });
 });
