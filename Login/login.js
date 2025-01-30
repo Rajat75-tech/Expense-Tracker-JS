@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timer: 2000,
             buttons: false,
         }).then(() => {
-            window.location.href = "../Main/main.html";
+            window.location.href = "/Main/main.html";
         });
     });
 });
